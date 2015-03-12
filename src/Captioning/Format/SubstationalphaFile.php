@@ -102,6 +102,23 @@ class SubstationalphaFile extends File
         return $this->styles;
     }
 
+    public function setStyles($_styles)
+    {
+        $this->styles = $_styles;
+    }
+
+    public function setEvents($_events)
+    {
+        if (!empty($_events) && is_array($_events)) {
+            $this->events = $_events;
+        }
+    }
+
+    public function getEvents()
+    {
+        return $this->events;
+    }
+
     public function addComment($_comment)
     {
         $this->comments[] = $_comment;
